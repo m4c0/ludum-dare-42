@@ -141,6 +141,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b61672e5a7b2434eb969be0f95c0093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  allDigits:
+  - {fileID: 21300006, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300008, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300010, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300012, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300014, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300016, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300018, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300020, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300022, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  - {fileID: 21300024, guid: c1975572880127f4ab01b21425bfa390, type: 3}
+  panelDigits:
+  - {fileID: 212006965953109706}
+  - {fileID: 212898881215867502}
+  - {fileID: 212820023301915136}
 --- !u!212 &212006965953109706
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,16 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[ExecuteInEditMode]
 public class Number : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private int oldValue = -1;
+    public int value;
+
+    [SerializeField]
+    private Sprite[] allDigits;
+    [SerializeField]
+    private SpriteRenderer[] panelDigits;
+
+    void Update() {
+        if (oldValue == value) return;
+
+        var v = value;
+        for (int i = panelDigits.Length - 1; i >= 0; i--) {
+            var digit = v % 10;
+            panelDigits[i].sprite = allDigits[digit];
+            v /= 10;
+        }
+
+        oldValue = value;
+    }
 }
