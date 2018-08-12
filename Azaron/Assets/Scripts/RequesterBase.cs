@@ -10,7 +10,7 @@ public class RequesterBase : MonoBehaviour {
 
     public AudioSource woosh;
 
-    private new Collider collider;
+    private Collider collider;
 
     private Rigidbody validCube;
     private bool wentInvalid = false;

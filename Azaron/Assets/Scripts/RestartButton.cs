@@ -4,6 +4,6 @@ using UnityEngine.SceneManagement;
 public class RestartButton : MonoBehaviour {
 
 	public void RestartLevel() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 }
