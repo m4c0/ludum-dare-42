@@ -277,8 +277,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 479271500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.075, y: -0.45, z: -3}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 4}
+  m_LocalPosition: {x: 0.075, y: -0.45, z: -4}
+  m_LocalScale: {x: 0.125, y: 0.1, z: 5}
   m_Children:
   - {fileID: 606724578}
   m_Father: {fileID: 1302869521}
@@ -494,8 +494,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4, z: 1}
-  m_Center: {x: 0, y: 2.5, z: 0}
+  m_Size: {x: 1, y: 12, z: 1}
+  m_Center: {x: 0, y: 6, z: 0}
 --- !u!114 &606724580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,9 +507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc79f2f205ef2445b3db5aafbb85657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ok: {fileID: 2100000, guid: 1f5f14c1bb295fb44bf53bebddd85cf7, type: 2}
+  ok: {fileID: 2100000, guid: aef2224d98da4e745b644ac0021ac701, type: 2}
   nok: {fileID: 2100000, guid: e69ace747b48bef45aa2d4892d17bd16, type: 2}
-  wait: {fileID: 0}
+  wait: {fileID: 2100000, guid: 1f5f14c1bb295fb44bf53bebddd85cf7, type: 2}
   baseRenderer: {fileID: 479271501}
 --- !u!1001 &652254976
 Prefab:
@@ -781,6 +781,41 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114760807437425036, guid: 79675d76c0ae4084bb95426c1f643af4,
+        type: 2}
+      propertyPath: value
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212820023301915136, guid: 79675d76c0ae4084bb95426c1f643af4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212820023301915136, guid: 79675d76c0ae4084bb95426c1f643af4,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212898881215867502, guid: 79675d76c0ae4084bb95426c1f643af4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212898881215867502, guid: 79675d76c0ae4084bb95426c1f643af4,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212006965953109706, guid: 79675d76c0ae4084bb95426c1f643af4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212006965953109706, guid: 79675d76c0ae4084bb95426c1f643af4,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79675d76c0ae4084bb95426c1f643af4, type: 2}
   m_IsPrefabParent: 0
@@ -880,8 +915,9 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 256
-  maxDistance: 1
+  maxDistance: 1.3
   castRadius: 0.2
+  throwIntensity: 3
 --- !u!1001 &1073635691
 Prefab:
   m_ObjectHideFlags: 0

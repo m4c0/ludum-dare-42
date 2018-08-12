@@ -16,16 +16,18 @@ public class Requester : MonoBehaviour {
     void Awake() {
         Instance = this;
     }
-    void Start() {
-        SelectNextValue();
-    }
 
     private void SelectNextValue() {
-        number.value = values[Random.Range(0, values.Count)];
+        if (values.Count > 0) {
+            number.value = values[Random.Range(0, values.Count)];
+        } else {
+            number.value = -1;
+        }
     }
 	
     public void AddPossibleValue(int n) {
         values.Add(n);
+        if (CurrentValue == -1) number.value = n;
     }
     public void RemovePossibleValue(int n) {
         values.Remove(n);
