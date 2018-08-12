@@ -5,6 +5,7 @@ public class CubeGrab : MonoBehaviour {
     public LayerMask mask;
     public float maxDistance = 10;
     public float castRadius = 0.4f;
+    public float throwIntensity = 3.0f;
 
     private Rigidbody cube;
 
@@ -28,14 +29,20 @@ public class CubeGrab : MonoBehaviour {
 
     private void Attach() {
         cube.useGravity = false;
+        cube.freezeRotation = true;
         cube.transform.SetParent(this.transform, true);
     }
 
     private void BreakConnection() {
         if (!cube) return;
 
+        var x = Input.GetAxis("Mouse X") * transform.right;
+        var y = Input.GetAxis("Mouse Y") * transform.up;
+
+        cube.freezeRotation = false;
         cube.useGravity = true;
         cube.transform.SetParent(null, true);
+        cube.AddForce((x + y) * throwIntensity, ForceMode.Impulse);
         cube = null;
     }
 }
