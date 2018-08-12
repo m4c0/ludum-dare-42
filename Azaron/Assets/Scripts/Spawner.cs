@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Spawner : MonoBehaviour {
 
@@ -7,6 +8,11 @@ public class Spawner : MonoBehaviour {
     public float alarmTimeout = 10.0f;
 
     public Renderer platform;
+
+    public AudioMixer mixer;
+    public AudioMixerSnapshot alarmMixerSnapshot;
+    public AudioMixerSnapshot normalMixerSnapshot;
+    public AudioMixerSnapshot gameoverMixerSnapshot;
 
     public Canvas gameOverCanvas;
     public MonoBehaviour[] objectsToDisableOnGameOver;
@@ -48,12 +54,17 @@ public class Spawner : MonoBehaviour {
 
     private IEnumerator SpawnLoop() {
         while (isActiveAndEnabled) {
+            mixer.TransitionToSnapshots(new AudioMixerSnapshot[] { normalMixerSnapshot }, new float[] { 1 }, 0.5f);
+
             yield return new WaitForSeconds(spawnTimeout - alarmTimeout);
             Spawn();
+            mixer.TransitionToSnapshots(new AudioMixerSnapshot[] { alarmMixerSnapshot }, new float[] { 1 }, 0.5f);
             yield return new WaitForSeconds(spawnTimeout);
 
             if (enterCount > 0) {
                 // That's Game Over
+                mixer.TransitionToSnapshots(new AudioMixerSnapshot[] { gameoverMixerSnapshot }, new float[] { 1 }, 1f);
+
                 foreach (var obj in objectsToDisableOnGameOver) {
                     obj.enabled = false;
                 }

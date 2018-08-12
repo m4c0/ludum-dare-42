@@ -8,6 +8,8 @@ public class RequesterBase : MonoBehaviour {
     public Material wait;
     public Renderer baseRenderer;
 
+    public AudioSource woosh;
+
     private new Collider collider;
 
     private Rigidbody validCube;
@@ -93,6 +95,8 @@ public class RequesterBase : MonoBehaviour {
     }
 
     private IEnumerator RaiseTheBar() {
+        woosh.Play();
+
         yield return new WaitForSeconds(3);
 
         Requester.Instance.RemovePossibleValue(validCube.GetComponent<Cube>().Id);
