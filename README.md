@@ -14,3 +14,6 @@ Tools used:
 
 * Unity 3D
 * Audacity
+
+Check it out on LDJam: https://ldjam.com/events/ludum-dare/42/azaron
+Or Itch.io: https://m4c0.itch.io/azaron
