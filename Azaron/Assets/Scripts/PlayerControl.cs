@@ -22,9 +22,14 @@ public class PlayerControl : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnDisable() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    // Update is called once per frame
+    void Update () {
         headAngle += verticalRotationSpeed * -Input.GetAxis("Mouse Y");
         headAngle = Mathf.Clamp(headAngle, -maxVerticalAngle, maxVerticalAngle);
         head.localRotation = Quaternion.Euler(headAngle, 0, 0);

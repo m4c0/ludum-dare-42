@@ -8,6 +8,9 @@ public class Spawner : MonoBehaviour {
 
     public Renderer platform;
 
+    public Canvas gameOverCanvas;
+    public MonoBehaviour[] objectsToDisableOnGameOver;
+
     public Material ok;
     public Material nok;
     public Material warn;
@@ -48,6 +51,22 @@ public class Spawner : MonoBehaviour {
             yield return new WaitForSeconds(spawnTimeout - alarmTimeout);
             Spawn();
             yield return new WaitForSeconds(spawnTimeout);
+
+            if (enterCount > 0) {
+                // That's Game Over
+                foreach (var obj in objectsToDisableOnGameOver) {
+                    obj.enabled = false;
+                }
+
+                gameOverCanvas.enabled = true;
+
+                var group = gameOverCanvas.GetComponent<CanvasGroup>();
+                while (group.alpha < 0.999) {
+                    group.alpha += Time.deltaTime;
+                    yield return null;
+                }
+                break;
+            }
 
             toSpawn.GetComponent<Collider>().enabled = true;
             toSpawn.useGravity = true;
