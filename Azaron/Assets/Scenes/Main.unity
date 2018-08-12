@@ -1512,6 +1512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTimeout: 20
+  alarmTimeout: 10
   platform: {fileID: 2081796604}
   ok: {fileID: 2100000, guid: aef2224d98da4e745b644ac0021ac701, type: 2}
   nok: {fileID: 2100000, guid: e69ace747b48bef45aa2d4892d17bd16, type: 2}

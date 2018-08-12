@@ -15,7 +15,8 @@ public class Spawner : MonoBehaviour {
     public Cube cubePrefab;
 
     private int enterCount = 0;
-    private bool readyToSpawn = false;
+
+    private Rigidbody toSpawn;
 
     private void OnEnable() {
         StartCoroutine(SpawnLoop());
@@ -24,10 +25,14 @@ public class Spawner : MonoBehaviour {
     private void Update() {
         if (enterCount != 0) {
             platform.sharedMaterial = nok;
-        } else if (readyToSpawn) {
+        } else if (toSpawn) {
             platform.sharedMaterial = warn;
         } else {
             platform.sharedMaterial = ok;
+        }
+
+        if (toSpawn) {
+            toSpawn.transform.Rotate(0, 100 * Time.deltaTime, 0);
         }
     }
 
@@ -40,16 +45,25 @@ public class Spawner : MonoBehaviour {
 
     private IEnumerator SpawnLoop() {
         while (isActiveAndEnabled) {
-            readyToSpawn = false;
             yield return new WaitForSeconds(spawnTimeout - alarmTimeout);
-            readyToSpawn = true;
-            yield return new WaitForSeconds(spawnTimeout);
             Spawn();
+            yield return new WaitForSeconds(spawnTimeout);
+
+            toSpawn.GetComponent<Collider>().enabled = true;
+            toSpawn.useGravity = true;
+            toSpawn.isKinematic = false;
+            toSpawn = null;
         }
     }
 
     private void Spawn() {
         var cube = Instantiate(cubePrefab);
         cube.transform.position = transform.position;
+
+        cube.GetComponent<Collider>().enabled = false;
+
+        toSpawn = cube.GetComponent<Rigidbody>();
+        toSpawn.useGravity = false;
+        toSpawn.isKinematic = true;
     }
 }
