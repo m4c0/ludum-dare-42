@@ -175,6 +175,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &188299049
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.6588974
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.9272833
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.8171635
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.053958125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.029975576
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.029149594
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99766743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744888529610432, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+      propertyPath: m_Name
+      value: Cube (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &279666393
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,18 +349,6 @@ Prefab:
     - target: {fileID: 1744888529610432, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
       propertyPath: m_Name
       value: Cube (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 69.874
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -26.382002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 13.103001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
@@ -530,7 +564,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 15da1fc8866ae234fb213b75f8c3793b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -980,7 +1014,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4511761240125630, guid: 79675d76c0ae4084bb95426c1f643af4, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4511761240125630, guid: 79675d76c0ae4084bb95426c1f643af4, type: 2}
       propertyPath: m_LocalScale.x
@@ -1253,18 +1287,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 50.551003
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 72.200005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 78.50201
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
   m_IsPrefabParent: 0
@@ -1384,7 +1406,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 15da1fc8866ae234fb213b75f8c3793b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1541,7 +1563,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 15da1fc8866ae234fb213b75f8c3793b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1860,18 +1882,6 @@ Prefab:
     - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 25.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 55.864002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229079206763660, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 121.97201
       objectReference: {fileID: 0}
     - target: {fileID: 1744888529610432, guid: 7762f9389b393ff4e890d850d5c9188c, type: 2}
       propertyPath: m_Name
